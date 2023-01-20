@@ -15,12 +15,11 @@ class TaskController extends Controller
             'tasks',$tasks);
         
     }
-    public function show($id){
-        $task = Task::find($id);
-        $user = $task->user();
-        dd($task);
+    public function show(Task $task){
+        //$task = Task::find($id);
+        
         return view('tasks.task')->with(
-            'user',$user
+            'task',$task
         );
     }
     public function store(Request $request) {}

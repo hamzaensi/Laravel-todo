@@ -8,6 +8,6 @@
 </head>
 <body>
     <h3>Details of a task</h3>
-    <h1>{{$user}}</h1>
+    <h1>{{$task->content}}</h1>
 </body>
 </html>
