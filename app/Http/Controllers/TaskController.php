@@ -22,5 +22,17 @@ class TaskController extends Controller
             'task',$task
         );
     }
-    public function store(Request $request) {}
+    public function edit() {
+        return view('tasks.edit');
+    }
+    public function store(Request $request) {
+        $task = new Task();
+        $task->content= $request->content;
+        $task->user_id= 1;
+        $task->save();
+        return redirect('/tasks');
+        //redirect('tasks');
+        //;
+
+    }
 }
