@@ -6,7 +6,7 @@ Edit task
 
 <div class="card">
 <div class="card-body">
-    <form action="{{route('store')}}" method="post">
+    <form action="{{route('tasks')}}" method="post">
         @csrf
         <div class="form-group">
             <label for="content">Task</label>

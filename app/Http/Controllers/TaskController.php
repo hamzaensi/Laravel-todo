@@ -30,9 +30,15 @@ class TaskController extends Controller
         $task->content= $request->content;
         $task->user_id= 1;
         $task->save();
-        return redirect('/tasks');
-        //redirect('tasks');
-        //;
+        return redirect(route('tasks'));
+        
+
+    }
+    public function delete($id) {
+
+        $task = Task::find($id);
+        $task->delete();
+        return redirect(route('tasks'));
 
     }
 }
